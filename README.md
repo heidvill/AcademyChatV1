@@ -5,7 +5,7 @@ MVC Web Application, jossa mahdollisuus lähettää ja lukea viestejä.
 Academyn Accelerated Learning Program C# -kurssin viikon 6 perjantairyhmätyö. Aiheena MVC-projekti sekä tietokanta.
 
 ## Toiminnot projektin ajamiseen
-Täydennä Models-hakemiston AcademyChatContext-tiedostoon puuttuvat Connection String.
+Täydennä Models-hakemiston AcademyChatContext-tiedostoon puuttuva Connection String.
 
 ## Ryhmän jäsenet
 - [Urho](https://github.com/unie31 "https://github.com/unie31")
