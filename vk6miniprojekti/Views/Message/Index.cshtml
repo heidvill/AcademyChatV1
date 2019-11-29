@@ -1,0 +1,51 @@
+﻿@using System.Linq;
+@using vk6miniprojekti.Models
+
+@model IEnumerable<vk6miniprojekti.Models.Message>
+
+@{
+    ViewData["Title"] = "Index";
+    AcademyChatContext db = new AcademyChatContext();
+}
+
+<h1><i>Le Doj</i></h1>
+<p><strong>Tapaa kuumia sinkkuja alueellasi ;)</strong></p>
+
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                From
+            </th>
+            <th>
+                Message
+            </th>
+            <th>
+                Time
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @{string q = (from p in db.Person where p.PersonId == item.FromPersonId select p.NickName).FirstOrDefault();
+                    }
+                    @q
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MessageText)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SendTime)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
